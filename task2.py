@@ -1,19 +1,18 @@
 def main():
     """
     ГЛАВНОЕ ЗАДАНИЕ
-    Отвечает за вывод списка кубов нечётных чисел
+    Отвечает за вывод списка кубов нечётных чисел от 1 до 1000
+    то есть это числа 1, 3, 5, 7....
     """
     list_odd = []
     for number_power in range(0, 1001):
-        number_odd = number_power ** 3
-        if number_odd % 2 != 0:
-            list_odd.append(number_odd)
+        if number_power%2 != 0:
+            number = number_power**3
+            list_odd.append(number)
     print(f"{list_odd} \n")
 
     """
-    ЗАДАНИЕ под буквой А
-    Отвечает за список не делимой суммы состовляющих числа на 7
-    be - составляющие (название просто что бы потом вернуть нормальное число)
+    Задание 2А
     """
     division_list = []
     for number in list_odd:
@@ -25,10 +24,9 @@ def main():
         if sum % 7 == 0:
             division_list.append(number)
     print(f"{division_list} \n")
-
+    
     """
-    ЗАДАНИЕ под буквой Б
-    Отвечает за список к которому прибавлено 17 и делится на 7 без остатка
+    Задание 2Б
     """
     divisible_without = []
     for number in list_odd:
@@ -37,9 +35,6 @@ def main():
         if numb % 7 == 0:
             divisible_without.append(number)
     print(f"{divisible_without}")
-
-
+    
 if __name__ == "__main__":
     main()
-
-#Фидбэк
