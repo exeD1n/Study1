@@ -13,6 +13,7 @@ def main():
 
     """
     Задание 2А
+    Вернуть список кубов нечётных чисел от 1 до 1000(сумма составляющих этого элемента делится на 7)
     """
     division_list = []
     for number in list_odd:
@@ -27,12 +28,17 @@ def main():
     
     """
     Задание 2Б
+    Вернуть список кубов нечётных чисел от 1 до 1000, прибавить по 17 к каждому эелементу (сумма составляющих этого элемента делится на 7)
     """
     divisible_without = []
     for number in list_odd:
-        numb = number
-        numb += 17
-        if numb % 7 == 0:
+        be = number
+        be += 17
+        sum = 0
+        while be > 0:
+            sum = sum + be % 10
+            be = be // 10
+        if sum%7 == 0:
             divisible_without.append(number)
     print(f"{divisible_without}")
     
